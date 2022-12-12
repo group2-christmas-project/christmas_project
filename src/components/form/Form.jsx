@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { __postPost } from "../../redux/modules/postSlice";
 import "./form.css";
 
 function Form() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [post, setPost] = useState({
     id: 0,
@@ -13,9 +16,8 @@ function Form() {
     url: "",
   });
 
-  const onSubmitHandler = async () => {
-    if (post.category === "") return alert("카테고리를 선택하세요!!!");
-    await axios.post(`http://localhost:3001/${post.category}`, post);
+  const onClickHandler = () => {
+    dispatch(__postPost({ post }));
     navigate(`/${post.category}`);
   };
   console.log(post);
@@ -71,7 +73,7 @@ function Form() {
         </div>
       </div>
       <div className="posting-btn">
-        <button onClick={onSubmitHandler}>완료</button>
+        <button onClick={onClickHandler}>완료</button>
       </div>
     </div>
   );
