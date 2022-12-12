@@ -13,31 +13,31 @@ const Header = () => {
         </a>
 
         <div className="sub-menu">
-          <ul class="menu">
+          <ul className="menu">
             <li>
-              <a href="javascript:void(0)">Sign in</a>
+              <a href="/">Sign in</a>
             </li>
             <li>
-              <a href="javascript:void(0)">Sign Up</a>
+              <a href="/">Sign Up</a>
             </li>
             <li>
-              <a href="javascript:void(0)">Customer Service</a>
+              <a href="/">Customer Service</a>
             </li>
           </ul>
         </div>
 
         <div className="main-menu">
           <div className="main__name">
-            <a href="javascript:void(0)">FAMILY</a>
+            <a href="/">FAMILY</a>
           </div>
           <div className="main__name">
-            <a href="javascript:void(0)">COUPLE</a>
+            <a href="/">COUPLE</a>
           </div>
           <div className="main__name">
-            <a href="javascript:void(0)">SINGLE</a>
+            <a href="/">SINGLE</a>
           </div>
           <div className="main__name">
-            <a href="javascript:void(0)">PARENTS</a>
+            <a href="/">PARENTS</a>
           </div>
         </div>
       </div>
