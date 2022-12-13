@@ -7,7 +7,7 @@ const Header = () => {
       <div className="inner">
         <a href="/" className="logo">
           <img
-            src="https://w7.pngwing.com/pngs/639/725/png-transparent-lettering-text-christmas-christmas-logo-holidays-text-logo.png"
+            src="http://localhost:3000/image/logo.png"
             alt="WRU DOING CHRISMAS"
           />
         </a>

@@ -1,11 +1,15 @@
 import Form from "../components/form/Form";
 import Layout from "../components/layout/Layout";
+import Header from "../components/header/Header";
 
 const Posting = () => {
   return (
-    <Layout>
-      <Form />
-    </Layout>
+    <>
+      <Header />
+      <Layout>
+        <Form />
+      </Layout>
+    </>
   );
 };
 

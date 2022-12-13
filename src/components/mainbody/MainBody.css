@@ -13,8 +13,8 @@
 }
 
 .container .item {
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
 
   font-size: 60px;
   border-radius: 50%;
@@ -30,13 +30,40 @@
   width: 270px;
   height: 270px;
 
-  background-color: antiquewhite;
-
   backface-visibility: hidden;
   transition: 1s;
   position: absolute;
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   transform: rotateY(0deg);
+}
+
+.container .item .front.family {
+  background-image: url("http://localhost:3000/image/family.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  opacity: 0.9;
+}
+.container .item .front.couple {
+  background-image: url("http://localhost:3000/image/couple.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  /* opacity: 0.9; */
+}
+.container .item .front.single {
+  background-image: url("http://localhost:3000/image/single.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  /* opacity: 0.9; */
+}
+.container .item .front.parents {
+  background-image: url("http://localhost:3000/image/parents.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  opacity: 0.9;
 }
 
 .container .item:hover .front {
@@ -46,10 +73,12 @@
 .container .item .back {
   width: 270px;
   height: 270px;
-  background-color: antiquewhite;
+  background-color: rgb(218, 205, 191);
+
   backface-visibility: hidden;
-  border: 2px solid #000;
+  /* border: 2px solid #000; */
   font-size: 20px;
+  text-align: center;
 
   position: absolute;
   transition: 1s;
@@ -60,7 +89,7 @@
   transform: rotateY(0deg);
 }
 
-.container .item .item__name {
+.container .item .back .item__name {
   padding: 0 20px;
   margin-bottom: 25px;
 }
