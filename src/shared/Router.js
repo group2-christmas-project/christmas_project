@@ -10,6 +10,8 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/:category" element={<List />} />
+        {/* 네스티드 라우츠  */}
+        {/* <Route path="/family" element={<List />} /> */}
         <Route path="/:id" element={<Detail />} />
         <Route path="/posting" element={<Posting />} />
       </Routes>

@@ -13,7 +13,7 @@ const MainBody = () => {
             <div className="item__name">
               가족들과 따뜻한 크리마스를 보내세요
             </div>
-            <a href="/" className="btn">
+            <a href="/family" className="btn">
               카테고리 보기
             </a>
           </div>
@@ -24,7 +24,7 @@ const MainBody = () => {
           </div>
           <div className="item back">
             <div className="item__name">연인과 따뜻한 크리마스를 보내세요</div>
-            <a href="/" className="btn">
+            <a href="/couple" className="btn">
               카테고리 보기
             </a>
           </div>
@@ -37,7 +37,7 @@ const MainBody = () => {
             <div className="item__name">
               혼자,친구들과 따뜻한 크리마스를 보내세요
             </div>
-            <a href="/" className="btn">
+            <a href="/single" className="btn">
               카테고리 보기
             </a>
           </div>
@@ -50,7 +50,7 @@ const MainBody = () => {
             <div className="item__name">
               부모님과 따뜻한 크리마스를 보내세요
             </div>
-            <a href="/" className="btn">
+            <a href="/parents" className="btn">
               카테고리 보기
             </a>
           </div>

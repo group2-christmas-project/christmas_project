@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 
 const Header = () => {
+  // const [menu, setMenu] = useState();
   return (
     <navbar>
       <div className="inner">
@@ -28,16 +29,19 @@ const Header = () => {
 
         <div className="main-menu">
           <div className="main__name">
-            <a href="/">FAMILY</a>
+            <a href="/family">FAMILY</a>
           </div>
           <div className="main__name">
-            <a href="/">COUPLE</a>
+            <a href="/couple">COUPLE</a>
           </div>
           <div className="main__name">
-            <a href="/">SINGLE</a>
+            <a href="/single">SINGLE</a>
           </div>
           <div className="main__name">
-            <a href="/">PARENTS</a>
+            <a href="/parents">PARENTS</a>
+          </div>
+          <div className="main__name red">
+            <a href="/posting">ADD POSTING</a>
           </div>
         </div>
       </div>

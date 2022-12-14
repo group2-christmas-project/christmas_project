@@ -79,6 +79,9 @@ navbar .main-menu .main__name {
   font-size: 13px;
   cursor: pointer;
 }
+navbar .main-menu .main__name.red a {
+  color: red;
+}
 
 navbar .main-menu .main__name a {
   color: #000;
