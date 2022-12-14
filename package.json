@@ -1,12 +1,22 @@
 {
+<<<<<<< HEAD
   "name": "todo4",
+=======
+  "name": "christmas_project",
+>>>>>>> 9923febd5d89afde41ac45f4f73c5b21a86059fd
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
+<<<<<<< HEAD
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+=======
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+>>>>>>> 9923febd5d89afde41ac45f4f73c5b21a86059fd
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
     "json-server": "^0.17.1",
@@ -16,7 +26,14 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "web-vitals": "^2.1.4"
+=======
+    "redux": "^4.2.0",
+    "styled-component": "^2.8.0",
+    "styled-components": "^5.3.6",
+    "web-vitals": "^2.1.0"
+>>>>>>> 9923febd5d89afde41ac45f4f73c5b21a86059fd
   },
   "scripts": {
     "start": "react-scripts start",

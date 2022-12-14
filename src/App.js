@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // src/App.jsx
 
 // import React, { useEffect } from "react";
@@ -45,3 +46,28 @@ function App() {
 }
 
 export default App;
+=======
+import React from "react";
+import styled from "styled-components";
+import Router from "./shared/Router";
+
+function App() {
+  return (
+    <GlobalStyle>
+      <Router />
+    </GlobalStyle>
+  );
+}
+
+export default App;
+
+const GlobalStyle = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-image: url("http://localhost:3000/image/bg2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+`;
+>>>>>>> 9923febd5d89afde41ac45f4f73c5b21a86059fd

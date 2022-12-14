@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // src/App.jsx
 
 import React, { useEffect, useState } from "react";
@@ -218,5 +219,8 @@ const Detail = () => {
     </div>
   );
 };
+=======
+const Detail = () => {};
+>>>>>>> 9923febd5d89afde41ac45f4f73c5b21a86059fd
 
 export default Detail;

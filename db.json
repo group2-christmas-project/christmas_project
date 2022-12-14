@@ -1,6 +1,7 @@
 {
   "posts": [
     {
+<<<<<<< HEAD
       "id": 0,
       "category": "family",
       "title": "아이와 함께",
@@ -72,6 +73,41 @@
       "postId": 0,
       "id": 10,
       "content": "ㄴㄴㄴㄴㄴㄴ"
+=======
+      "id": 1,
+      "title": "테스트1",
+      "category": "parents",
+      "content": "테수투1",
+      "url": "11111"
+    },
+    {
+      "title": "테스트2",
+      "category": "family",
+      "content": "테스트2",
+      "url": "xptmxm2",
+      "id": 2
+    },
+    {
+      "title": "테스트3",
+      "category": "family",
+      "content": "테스트3",
+      "url": "xptmxm3",
+      "id": 3
+    },
+    {
+      "title": "솔로분들을 위한 넷플릭스 추천이요~",
+      "category": "single",
+      "content": "솔로 동지분들 \n하루종일 집에만 계실꺼죠?다알아요 \n시간순삭 넷플릭스 시리즈 추천하나드릴게여!\n<브래이킹배드>시즌5까지 다보시면 이브&크리스마스 뚝딱! ",
+      "url": "https://m.media-amazon.com/images/I/81CblaI0DuL._AC_SX466_.jpg",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "title": "안녕하세요~서울사는 애둘맘입니다^^",
+      "category": "family",
+      "content": "이번 크리스마스 애기들 데리고 어디갈지 고민이셨죠?!\n서울 사시는 분들 이천 테르메덴스파 추천드려요!ㅎㅎ\n이천이라 서울에서 멀지도 않구~\n애기들도 넘잘놀구~^^ 어른들도 넘넘 좋아하세요~zz",
+      "url": "http://img2.tmon.kr/cdn3/deals/2019/12/11/2820594602/original_2820594602_front_1f616_1576051873production.jpg"
+>>>>>>> 9923febd5d89afde41ac45f4f73c5b21a86059fd
     }
   ]
 }
