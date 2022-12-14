@@ -1,17 +1,15 @@
-import Form from "../components/form/Form";
+import EditForm from "../components/form/EditForm";
 import Header from "../components/header/Header";
 import Layout from "../components/layout/Layout";
-import Header from "../components/header/Header";
 
-const Posting = () => {
+const PostingEdit = () => {
   return (
     <>
       <Header />
       <Layout>
-        <Form />
+        <EditForm />
       </Layout>
     </>
   );
 };
-
-export default Posting;
+export default PostingEdit;

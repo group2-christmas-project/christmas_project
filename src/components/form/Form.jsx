@@ -1,15 +1,14 @@
-import axios from "axios";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __postPost } from "../../redux/modules/postSlice";
+import Button from "../button/Button";
 import "./form.css";
 
 function Form() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [post, setPost] = useState({
-    id: 0,
     title: "",
     category: "",
     content: "",
@@ -17,10 +16,19 @@ function Form() {
   });
 
   const onClickHandler = () => {
-    dispatch(__postPost({ post }));
-    navigate(`/${post.category}`);
+    if (post.title === "") {
+      alert("제목을 입력해주세요");
+    } else if (post.category === "") {
+      alert("카테고리를 선태해주세요!");
+    } else if (post.content === "") {
+      alert("내용을 입력해주세요!");
+    } else {
+      dispatch(__postPost(post));
+      console.log(post);
+      navigate(`/${post.category}`);
+    }
   };
-  console.log(post);
+
   return (
     <div className="posting-form-contianer">
       <div className="posting-input-group">
@@ -35,7 +43,7 @@ function Form() {
           ></input>
         </div>
         <div className="posting-category">
-          <label>카테고리</label>
+          <label>WITH?</label>
           <select
             onChange={(event) => {
               const { value } = event.target;
@@ -46,14 +54,14 @@ function Form() {
             <option value="" selected>
               카테고리를 선택해주세요
             </option>
-            <option value="family">아이와함께</option>
-            <option value="couple">커플</option>
-            <option value="single">혼자지만 괜찮아</option>
-            <option value="parents">부모님과 함께</option>
+            <option value="family">아이와함께👶</option>
+            <option value="couple">연인과함께💕</option>
+            <option value="single">혼자지만 괜찮아😭</option>
+            <option value="parents">부모님과 함께👵👴</option>
           </select>
         </div>
         <div className="posting-content">
-          <input
+          <textarea
             type="text"
             onChange={(event) => {
               const { value } = event.target;
@@ -62,9 +70,9 @@ function Form() {
           />
         </div>
         <div className="posting-url">
-          <label>이미지 url 첨부하기</label>
           <input
             type="url"
+            placeholder="이미지url"
             onChange={(event) => {
               const { value } = event.target;
               setPost({ ...post, url: value });
@@ -73,7 +81,7 @@ function Form() {
         </div>
       </div>
       <div className="posting-btn">
-        <button onClick={onClickHandler}>완료</button>
+        <Button onClick={onClickHandler}>완료</Button>
       </div>
     </div>
   );
