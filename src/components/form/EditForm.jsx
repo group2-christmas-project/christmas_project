@@ -15,6 +15,7 @@ function EditForm() {
   const { id } = useParams();
 
   useEffect(() => {
+    console.log(id);
     dispatch(__getPost(id));
   }, []);
 
