@@ -55,10 +55,11 @@ navbar .sub-menu ul.menu li {
 }
 
 navbar .sub-menu ul.menu li a {
-  padding: 5px 16px;
+  padding: 13px 16px;
   display: block;
   font-size: 13px;
   color: #656565;
+  text-decoration: none;
 }
 
 navbar .sub-menu ul.menu li a:hover {
@@ -68,7 +69,7 @@ navbar .sub-menu ul.menu li a:hover {
 navbar .main-menu {
   position: absolute;
   bottom: 0;
-  right: 130px;
+  right: 120px;
   z-index: 1;
   display: flex;
 }
@@ -86,6 +87,7 @@ navbar .main-menu .main__name.red a {
 navbar .main-menu .main__name a {
   color: #000;
   padding: 15px;
+  text-decoration: none;
 }
 
 navbar .main-menu .main__name:hover a {
