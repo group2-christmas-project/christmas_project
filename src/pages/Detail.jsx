@@ -14,6 +14,7 @@ import axios from "axios";
 import { Card, Button, Form, InputGroup } from "react-bootstrap";
 import "./Detail.css";
 import Detailcomment from "../components/Detailcomment";
+import Header from "../components/header/Header";
 
 const Detail = () => {
   const dispatch = useDispatch();
@@ -72,69 +73,71 @@ const Detail = () => {
   console.log(comments);
 
   return (
-    <div className="detail">
-      <div className="detailMain">
-        <div className="detailContent">
-          {/* <p>id : {post.id}</p> */}
-          <h1>🎄{post.title}</h1>
-          <hr></hr>
-          <img src={post.url} className="detailImage" />
-          <p>{post.content}</p>
-          <div className="detailContentButtons">
-            <Button variant="danger" onClick={onClickPostDeleteButtonHandler}>
-              삭제
-            </Button>
-            {/* <button onClick={onClickPostDeleteButtonHandler}>삭제</button> */}
-            <Button variant="success">수정</Button>
-          </div>
-        </div>
-
-        <div className="detailComments">
-          {comments?.map((comment) => (
-            <Detailcomment
-              comment={comment}
-              editComment={editComment}
-              setEditComment={setEditComment}
-              id={id}
-              dispatch={dispatch}
-              __deleteComments={__deleteComments}
-              __editComments={__editComments}
-            />
-          ))}
-          <div className="detailCommentsInput">
-            <InputGroup className="mb-3">
-              <Form.Control
-                placeholder="댓글을 입력하세요."
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-                id="detailCommentsInputText"
-                onChange={(e) => {
-                  setAddComment({
-                    ...addComment,
-                    postId: Number(id),
-                    id: comments[comments.length - 1].id + 1,
-                    content: e.target.value,
-                  });
-                  console.log(addComment);
-                  console.log(addComment.id);
-                }}
-              />
-              <Button
-                variant="outline-secondary"
-                id="button-addon2"
-                onClick={() => {
-                  dispatch(__addComments(addComment));
-                }}
-              >
-                등록
+    <>
+      <Header />
+      <div className="detail">
+        <div className="detailMain">
+          <div className="detailContent">
+            {/* <p>id : {post.id}</p> */}
+            <h1>🎄{post.title}</h1>
+            <hr></hr>
+            <img src={post.url} className="detailImage" />
+            <p>{post.content}</p>
+            <div className="detailContentButtons">
+              <Button variant="danger" onClick={onClickPostDeleteButtonHandler}>
+                삭제
               </Button>
-            </InputGroup>
+              {/* <button onClick={onClickPostDeleteButtonHandler}>삭제</button> */}
+              <Button variant="success">수정</Button>
+            </div>
+          </div>
+
+          <div className="detailComments">
+            {comments?.map((comment) => (
+              <Detailcomment
+                comment={comment}
+                editComment={editComment}
+                setEditComment={setEditComment}
+                id={id}
+                dispatch={dispatch}
+                __deleteComments={__deleteComments}
+                __editComments={__editComments}
+              />
+            ))}
+            <div className="detailCommentsInput">
+              <InputGroup className="mb-3">
+                <Form.Control
+                  placeholder="댓글을 입력하세요."
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                  id="detailCommentsInputText"
+                  onChange={(e) => {
+                    setAddComment({
+                      ...addComment,
+                      postId: Number(id),
+                      id: comments[comments.length - 1].id + 1,
+                      content: e.target.value,
+                    });
+                    console.log(addComment);
+                    console.log(addComment.id);
+                  }}
+                />
+                <Button
+                  variant="outline-secondary"
+                  id="button-addon2"
+                  onClick={() => {
+                    dispatch(__addComments(addComment));
+                  }}
+                >
+                  등록
+                </Button>
+              </InputGroup>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
-
 
 export default Detail;

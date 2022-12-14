@@ -42,8 +42,8 @@ export const __getPost = createAsyncThunk(
   }
 );
 
-export const todosSlice = createSlice({
-  name: "todos",
+export const postSlice = createSlice({
+  name: "post",
   initialState,
   reducers: {},
   extraReducers: {
@@ -61,5 +61,5 @@ export const todosSlice = createSlice({
   },
 });
 
-export const {} = todosSlice.actions;
-export default todosSlice.reducer;
+export const {} = postSlice.actions;
+export default postSlice.reducer;
