@@ -2,12 +2,13 @@ import React from "react";
 import "./Header.css";
 
 const Header = () => {
+  // const [menu, setMenu] = useState();
   return (
     <navbar>
       <div className="inner">
         <a href="/" className="logo">
           <img
-            src="https://w7.pngwing.com/pngs/639/725/png-transparent-lettering-text-christmas-christmas-logo-holidays-text-logo.png"
+            src="http://localhost:3000/image/logo.png"
             alt="WRU DOING CHRISMAS"
           />
         </a>
@@ -28,16 +29,19 @@ const Header = () => {
 
         <div className="main-menu">
           <div className="main__name">
-            <a href="/">FAMILY</a>
+            <a href="/family">FAMILY</a>
           </div>
           <div className="main__name">
-            <a href="/">COUPLE</a>
+            <a href="/couple">COUPLE</a>
           </div>
           <div className="main__name">
-            <a href="/">SINGLE</a>
+            <a href="/single">SINGLE</a>
           </div>
           <div className="main__name">
-            <a href="/">PARENTS</a>
+            <a href="/parents">PARENTS</a>
+          </div>
+          <div className="main__name red">
+            <a href="/posting">ADD POSTING</a>
           </div>
         </div>
       </div>
