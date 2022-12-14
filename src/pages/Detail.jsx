@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 // src/App.jsx
-
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -93,87 +91,6 @@ const Detail = () => {
 
         <div className="detailComments">
           {comments?.map((comment) => (
-            // <div className="detailCommentsOneCard">
-            //   <Card key={comment.id}>
-            //     <Card.Body className="detailCommentsOne">
-            //       {comment.isCommentChange === false ? (
-            //         comment.content
-            //       ) : (
-            //         <input
-            //           type="text"
-            //           onChange={(e) => {
-            //             setEditComment({
-            //               ...editComment,
-            //               postId: Number(id),
-            //               id: comment.id,
-            //               content: e.target.value,
-            //             });
-            //             console.log(editComment);
-            //           }}
-            //         ></input>
-            //       )}
-            //       {/* {comment.content} */}
-            //       {/* <input
-            //         type="text"
-            //         onChange={(e) => {
-            //           setEditComment({
-            //             ...editComment,
-            //             postId: Number(id),
-            //             id: comment.id,
-            //             content: e.target.value,
-            //           });
-            //           console.log(editComment);
-            //         }}
-            //       ></input> */}
-            //       <div>
-            //         <Button
-            //           className="detailCommentsOneBtn"
-            //           variant="danger"
-            //           onClick={() => dispatch(__deleteComments(comment.id))}
-            //         >
-            //           삭제
-            //         </Button>
-            //         <Button
-            //           className="detailCommentsOneBtn"
-            //           variant="success"
-            //           onClick={() => {
-            //             onClickCommentEditButtonHandler(
-            //               comment.id,
-            //               editComment,
-            //               comment.isCommentChange
-            //             );
-            //           }}
-            //         >
-            //           수정
-            //         </Button>
-            //       </div>
-            //     </Card.Body>
-            //   </Card>
-            //   {/* <div key={comment.id}>댓글 : {comment.content}</div> */}
-            //   {/* <button onClick={() => dispatch(__deleteComments(comment.id))}>
-            //     삭제
-            //   </button> */}
-
-            //   {/* <input
-            //     type="text"
-            //     onChange={(e) => {
-            //       setEditComment({
-            //         ...editComment,
-            //         postId: Number(id),
-            //         id: comment.id,
-            //         content: e.target.value,
-            //       });
-            //       console.log(editComment);
-            //     }}
-            //   ></input> */}
-            //   {/* <button
-            //     onClick={() =>
-            //       dispatch(__editComments([comment.id, editComment]))
-            //     }
-            //   >
-            //     수정
-            //   </button> */}
-            // </div>
             <Detailcomment
               comment={comment}
               editComment={editComment}
@@ -182,7 +99,6 @@ const Detail = () => {
               dispatch={dispatch}
               __deleteComments={__deleteComments}
               __editComments={__editComments}
-              // onClickCommentEditButtonHandler={onClickCommentEditButtonHandler}
             />
           ))}
           <div className="detailCommentsInput">
@@ -219,8 +135,6 @@ const Detail = () => {
     </div>
   );
 };
-=======
-const Detail = () => {};
->>>>>>> 9923febd5d89afde41ac45f4f73c5b21a86059fd
+
 
 export default Detail;
