@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+// // src/App.jsx
+
+// import React, { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { __getFamilies } from "./redux/modules/familiesSlice";
+
+// const App = () => {
+//   const dispatch = useDispatch();
+//   // const state = useSelector((state) => state.families);
+//   // console.log(state);
+//   const { isLoading, error, families } = useSelector((state) => state.families);
+
+//   useEffect(() => {
+//     dispatch(__getFamilies());
+//   }, [dispatch]);
+
+//   if (isLoading) {
+//     return <div>로딩 중....</div>;
+//   }
+
+//   if (error) {
+//     return <div>{error.message}</div>;
+//   }
+//   console.log(families);
+//   return (
+//     <div>
+//       {/* <h1>{families[0].title}</h1> */}
+//       {families.map((family) => (
+//         <div key={family.id}>
+//           <h3>{family.title}</h3>
+//           <h4>{family.comment[0].content}</h4>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import "./App.css";
+import Router from "./shared/Router";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;
