@@ -3,6 +3,7 @@ import Main from "../pages/Main";
 import Detail from "../pages/Detail";
 import List from "../pages/List";
 import Posting from "../pages/Posting";
+import PostingEdit from "../pages/PostingEdit";
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
         <Route path="/:category" element={<List />} />
         <Route path="/:id" element={<Detail />} />
         <Route path="/posting" element={<Posting />} />
+        <Route path="/postingEdit/:id" element={<PostingEdit />} />
       </Routes>
     </BrowserRouter>
   );
