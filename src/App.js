@@ -14,7 +14,7 @@ export default App;
 
 const GlobalStyle = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 1000px;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.3),
