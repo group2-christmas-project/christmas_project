@@ -25,7 +25,6 @@ function Form() {
       alert("내용을 입력해주세요!");
     } else {
       dispatch(__postPost(post));
-      dispatch(__getList());
       navigate(`/${post.category}`);
     }
   };

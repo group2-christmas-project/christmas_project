@@ -6,7 +6,7 @@ import { __getList } from "../../redux/modules/postSlice";
 
 const Lists = () => {
   // const [posts, setPosts] = useState(null);
-  const { isLoading, error, posts } = useSelector((state) => state.list);
+  const { isLoading, error, posts } = useSelector((state) => state.post);
 
   const dispatch = useDispatch();
 
