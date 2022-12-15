@@ -38,25 +38,21 @@
 }
 
 .container .item .front.family {
-  background-image: url("http://localhost:3000/image/family2.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.9;
 }
 .container .item .front.couple {
-  background-image: url("http://localhost:3000/image/couple.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.9;
 }
 .container .item .front.single {
-  background-image: url("http://localhost:3000/image/single.jpeg");
   background-size: cover;
   background-position: bottom;
   opacity: 0.9;
 }
 .container .item .front.parents {
-  background-image: url("http://localhost:3000/image/parents.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.9;

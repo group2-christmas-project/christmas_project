@@ -19,7 +19,7 @@ const Lists = () => {
   }, []);
 
   const onErrorImg = (e) => {
-    e.target.src = "http://localhost:3000/image/default.jpg";
+    e.target.src = "/image/default.jpg";
   };
 
   return (
