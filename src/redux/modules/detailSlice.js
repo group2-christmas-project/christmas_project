@@ -74,7 +74,6 @@ export const __deleteComments = createAsyncThunk(
   "deleteComments",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       await axios.delete(`http://localhost:3001/comments/${payload}`);
 
       // 네트워크 요청이 성공한 경우 dispatch해주는 기능을 가진 API (Propmise가 resolved된 경우)
@@ -91,7 +90,6 @@ export const __editComments = createAsyncThunk(
   "editComments",
   async (payload, thunkAPI) => {
     try {
-      console.log(payload);
       const [commentId, editComment] = payload;
       await axios.patch(
         `http://localhost:3001/comments/${commentId}`,
