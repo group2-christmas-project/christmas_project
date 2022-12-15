@@ -15,7 +15,12 @@ export default App;
 const GlobalStyle = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url("http://localhost:3000/image/bg2.jpg");
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("http://localhost:3000/image/bg2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;

@@ -17,6 +17,10 @@ const Lists = () => {
     fetchPosts();
   }, []);
 
+  const onErrorImg = (e) => {
+    e.target.src = "http://localhost:3000/image/default.jpg";
+  };
+
   return (
     <div className="container">
       <div className="inners">
@@ -27,8 +31,9 @@ const Lists = () => {
                 <Link to={`/detail/${post.id}`} key={post.id}>
                   <img
                     className="photo"
-                    src="http://localhost:3000/image/bg1.jpg"
+                    src={post.url}
                     alt="이미지"
+                    onError={onErrorImg}
                   />
                 </Link>
                 <div className="text">{post.title}</div>
