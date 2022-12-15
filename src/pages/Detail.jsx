@@ -9,7 +9,7 @@ import {
   __editComments,
   __addComments,
 } from "../redux/modules/detailSlice";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Card, Button, Form, InputGroup } from "react-bootstrap";
 import "./Detail.css";
@@ -20,6 +20,8 @@ const Detail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   console.log(id);
+  const navigate = useNavigate();
+
   const { isLoading, error, post, comments } = useSelector(
     (state) => state.detail
   );
@@ -39,7 +41,9 @@ const Detail = () => {
     dispatch(__deletePost([Number(id), indexList]));
     window.location.assign("/");
   };
-
+  const onClickAddCommentButtonHandler = () => {
+    dispatch(__addComments([addComment, Number(id)]));
+  };
   const [editComment, setEditComment] = useState({
     postId: null,
     id: null,
@@ -81,19 +85,28 @@ const Detail = () => {
             {/* <p>id : {post.id}</p> */}
             <h1>🎄{post.title}</h1>
             <hr></hr>
-            <img src={post.url} className="detailImage" />
-            <p>{post.content}</p>
+            <div>
+              <img src={post.url} className="detailImage" />
+            </div>
+            <div>{post.content}</div>
             <div className="detailContentButtons">
               <Button variant="danger" onClick={onClickPostDeleteButtonHandler}>
                 삭제
               </Button>
               {/* <button onClick={onClickPostDeleteButtonHandler}>삭제</button> */}
-              <Button variant="success">수정</Button>
+              <Button
+                variant="success"
+                onClick={() => {
+                  navigate(`/postingEdit/${post.id}`);
+                }}
+              >
+                수정
+              </Button>
             </div>
           </div>
 
           <div className="detailComments">
-            {comments?.map((comment) => (
+            {comments.map((comment) => (
               <Detailcomment
                 comment={comment}
                 editComment={editComment}
@@ -114,8 +127,8 @@ const Detail = () => {
                   onChange={(e) => {
                     setAddComment({
                       ...addComment,
-                      postId: Number(id),
-                      id: comments[comments.length - 1].id + 1,
+                      // postId: Number(id),
+                      // id: comments[comments.length - 1].id + 1,
                       content: e.target.value,
                     });
                     console.log(addComment);
@@ -125,9 +138,7 @@ const Detail = () => {
                 <Button
                   variant="outline-secondary"
                   id="button-addon2"
-                  onClick={() => {
-                    dispatch(__addComments(addComment));
-                  }}
+                  onClick={onClickAddCommentButtonHandler}
                 >
                   등록
                 </Button>

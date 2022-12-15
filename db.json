@@ -8,13 +8,6 @@
       "url": "xptmxm2"
     },
     {
-      "title": "테스트3",
-      "category": "family",
-      "content": "테스트3",
-      "url": "xptmxm3",
-      "id": 3
-    },
-    {
       "title": "솔로분들을 위한 넷플릭스 추천이요~",
       "category": "single",
       "content": "솔로 동지분들 \n하루종일 집에만 계실꺼죠?다알아요 \n시간순삭 넷플릭스 시리즈 추천하나드릴게여!\n<브래이킹배드>시즌5까지 다보시면 이브&크리스마스 뚝딱! ",
@@ -48,33 +41,25 @@
       "content": "ㅁㄴㅇㅁㄴㅇ",
       "url": "",
       "id": 8
+    },
+    {
+      "title": "유정유정",
+      "category": "single",
+      "content": "ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ",
+      "url": "https://i.ytimg.com/vi/u2kFB-nzKeM/maxresdefault.jpg",
+      "id": 10
     }
   ],
   "comments": [
     {
-      "postId": 2,
-      "id": 4,
-      "content": "eeee"
+      "postId": 4,
+      "id": "2022-12-15T04:11:25.808Z",
+      "content": "ettete"
     },
     {
-      "postId": 2,
-      "id": 5,
-      "content": "erererere"
-    },
-    {
-      "postId": 2,
-      "id": 6,
-      "content": "ttttt"
-    },
-    {
-      "postId": 2,
-      "id": 7,
-      "content": "dfdfdfdfd"
-    },
-    {
-      "postId": 2,
-      "id": 8,
-      "content": "3333"
+      "postId": 4,
+      "id": "2022-12-15T04:56:08.478Z",
+      "content": "45454"
     }
   ]
 }

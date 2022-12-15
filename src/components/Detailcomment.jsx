@@ -48,7 +48,10 @@ const Detailcomment = (props) => {
             <Button
               className="detailCommentsOneBtn"
               variant="danger"
-              onClick={() => dispatch(__deleteComments(comment.id))}
+              onClick={() => {
+                console.log(comment.id);
+                dispatch(__deleteComments(comment.id));
+              }}
             >
               삭제
             </Button>
