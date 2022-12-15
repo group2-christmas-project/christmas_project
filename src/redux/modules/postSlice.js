@@ -12,7 +12,7 @@ const initialState = {
 
 export const __postPost = createAsyncThunk("postPost", async (payload) => {
   try {
-    await axios.post("http://localhost:3001/posts", payload);
+    await axios.post("https://json-steel.vercel.app/posts", payload);
   } catch (error) {
     console.log(error);
   }
@@ -20,7 +20,10 @@ export const __postPost = createAsyncThunk("postPost", async (payload) => {
 
 export const __patchPost = createAsyncThunk("patchPost", async (payload) => {
   try {
-    await axios.put(`http://localhost:3001/posts/${payload[0]}`, payload[1]);
+    await axios.put(
+      `https://json-steel.vercel.app/posts/${payload[0]}`,
+      payload[1]
+    );
   } catch (error) {
     console.log(error);
   }
@@ -31,7 +34,7 @@ export const __getPost = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3001/posts/${payload}`
+        `https://json-steel.vercel.app/posts/${payload}`
       );
       return thunkAPI.fulfillWithValue(data);
     } catch (error) {

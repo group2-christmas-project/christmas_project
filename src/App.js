@@ -20,7 +20,7 @@ const GlobalStyle = styled.div`
       rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
     ),
-    url("http://localhost:3000/image/bg2.jpg");
+    url("/image/bg2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
