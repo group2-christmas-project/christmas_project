@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { __postPost } from "../../redux/modules/postSlice";
+import { __postPost, __getList } from "../../redux/modules/postSlice";
 import Button from "../button/Button";
 import "./form.css";
 
@@ -25,12 +25,8 @@ function Form() {
       alert("내용을 입력해주세요!");
     } else {
       dispatch(__postPost(post));
-      console.log(post);
-      if (isLoading === false) {
-        navigate(`/${post.category}`);
-      } else {
-        navigate("/");
-      }
+      dispatch(__getList());
+      navigate(`/${post.category}`);
     }
   };
   return (
