@@ -7,7 +7,7 @@ const Lists = () => {
   const [posts, setPosts] = useState(null);
 
   const fetchPosts = async () => {
-    const { data } = await axios.get("https://json-steel.vercel.app/posts");
+    const { data } = await axios.get("https://test101.fly.dev/posts");
     setPosts(data);
   };
 
@@ -15,6 +15,7 @@ const Lists = () => {
 
   useEffect(() => {
     fetchPosts();
+    console.log("아무거나");
   }, []);
 
   const onErrorImg = (e) => {
