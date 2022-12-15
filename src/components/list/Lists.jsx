@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import "./Lists.css";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { __getList } from "../../redux/modules/listSlice";
+import { __getList } from "../../redux/modules/postSlice";
 
 const Lists = () => {
   // const [posts, setPosts] = useState(null);
   const { isLoading, error, posts } = useSelector((state) => state.list);
-  console.log(posts);
+
   const dispatch = useDispatch();
 
   // const fetchPosts = async () => {
@@ -31,6 +31,7 @@ const Lists = () => {
   if (error) {
     return <div>{error.message}</div>;
   }
+  console.log(posts);
   return (
     <div className="container">
       <div className="inners">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { __postPost } from "../../redux/modules/postSlice";
 import Button from "../button/Button";
@@ -14,21 +14,25 @@ function Form() {
     content: "",
     url: "",
   });
+  const { isLoading, posts } = useSelector((state) => state.post);
 
   const onClickHandler = () => {
     if (post.title === "" || post.title.length >= 15) {
       alert("15자이내의 제목을 입력해주세요");
     } else if (post.category === "") {
-      alert("카테고리를 선태해주세요!");
+      alert("카테고리를 선택해주세요!");
     } else if (post.content === "") {
       alert("내용을 입력해주세요!");
     } else {
       dispatch(__postPost(post));
       console.log(post);
-      navigate("/");
+      if (isLoading === false) {
+        navigate(`/${post.category}`);
+      } else {
+        navigate("/");
+      }
     }
   };
-
   return (
     <div className="posting-form-contianer">
       <div className="posting-input-group">
