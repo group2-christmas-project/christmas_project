@@ -14,7 +14,7 @@ export const __getPost = createAsyncThunk(
   "getPost",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3001/posts");
+      const data = await axios.get("https://json-steel.vercel.app/posts");
       // console.log(data.data);
       // console.log(data.data.filter((family) => family.id === payload)[0]);
       // 네트워크 요청이 성공한 경우 dispatch해주는 기능을 가진 API (Propmise가 resolved된 경우)
@@ -34,10 +34,10 @@ export const __deletePost = createAsyncThunk(
   async (payload, thunkAPI) => {
     try {
       const [id, indexList] = payload;
-      await axios.delete(`http://localhost:3001/posts/${id}`);
+      await axios.delete(`https://json-steel.vercel.app/posts/${id}`);
 
       for (const i in indexList) {
-        await axios.delete(`http://localhost:3001/comments/${i}`);
+        await axios.delete(`https://json-steel.vercel.app/comments/${i}`);
       }
       // console.log(data.data);
       // console.log(data.data.filter((family) => family.id === payload)[0]);
@@ -55,7 +55,7 @@ export const __getComments = createAsyncThunk(
   "getComments",
   async (payload, thunkAPI) => {
     try {
-      const data = await axios.get("http://localhost:3001/comments");
+      const data = await axios.get("https://json-steel.vercel.app/comments");
       // console.log(data.data);
       // console.log(data.data.filter((comment) => comment.postId === payload));
       // 네트워크 요청이 성공한 경우 dispatch해주는 기능을 가진 API (Propmise가 resolved된 경우)
@@ -74,7 +74,7 @@ export const __deleteComments = createAsyncThunk(
   "deleteComments",
   async (payload, thunkAPI) => {
     try {
-      await axios.delete(`http://localhost:3001/comments/${payload}`);
+      await axios.delete(`https://json-steel.vercel.app/comments/${payload}`);
 
       // 네트워크 요청이 성공한 경우 dispatch해주는 기능을 가진 API (Propmise가 resolved된 경우)
       return thunkAPI.fulfillWithValue(payload); // 성공을 하면 fulfillWithValue에 의해 생성된 todos, getTodos, fullfilled라는 action이 dispatch되었다.
@@ -92,7 +92,7 @@ export const __editComments = createAsyncThunk(
     try {
       const [commentId, editComment] = payload;
       await axios.patch(
-        `http://localhost:3001/comments/${commentId}`,
+        `https://json-steel.vercel.app/comments/${commentId}`,
         editComment
       );
       // console.log(data.data);
@@ -117,7 +117,7 @@ export const __addComments = createAsyncThunk(
       const newComment = { ...addComment, postId: postId, id: dateId };
       console.log(newComment);
 
-      await axios.post("http://localhost:3001/comments", newComment);
+      await axios.post("https://json-steel.vercel.app/comments", newComment);
       // // 네트워크 요청이 성공한 경우 dispatch해주는 기능을 가진 API (Propmise가 resolved된 경우)
       return thunkAPI.fulfillWithValue(newComment); // 성공을 하면 fulfillWithValue에 의해 생성된 todos, getTodos, fullfilled라는 action이 dispatch되었다.
     } catch (error) {

@@ -7,7 +7,7 @@ const Lists = () => {
   const [posts, setPosts] = useState(null);
 
   const fetchPosts = async () => {
-    const { data } = await axios.get("http://localhost:3001/posts");
+    const { data } = await axios.get("https://json-steel.vercel.app/posts");
     setPosts(data);
   };
 
